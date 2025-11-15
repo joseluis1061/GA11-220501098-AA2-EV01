@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Resultados del Software - ADSO SENA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>SENA</h1>
+                <p>Servicio Nacional de Aprendizaje</p>
+            </div>
+            <div class="program-info">
+                <h2>Análisis y Desarrollo de Sistemas de Información</h2>
+                <div class="student-info">
+                    <p><strong>Estudiante:</strong> José Luis Zúñiga</p>
+                    <p><strong>Instructor:</strong> Julián Loaiza</p>
+                    <p><strong>Ficha:</strong> 2885494</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#introduccion" class="nav-link">Introducción</a></li>
+                <li><a href="#resumen" class="nav-link">Resumen Ejecutivo</a></li>
+                <li><a href="#recursos" class="nav-link">Recursos</a></li>
+                <li><a href="#pruebas" class="nav-link">Pruebas</a></li>
+                <li><a href="#resultados" class="nav-link">Resultados</a></li>
+                <li><a href="#metricas" class="nav-link">Métricas</a></li>
+                <li><a href="#conclusiones" class="nav-link">Conclusiones</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Informe de Resultados del Comportamiento del Software</h1>
+                <h2 class="hero-subtitle">Sistema de Gestión de Inventario Multi-tienda</h2>
+                <p class="hero-description">
+                    GA11-220501098-AA2-EV01: Evaluación completa del comportamiento, rendimiento 
+                    y calidad del sistema mediante pruebas exhaustivas y métricas objetivas
+                </p>
+                <div class="hero-buttons">
+                    <a href="#resumen" class="btn btn-primary">Ver Resumen Ejecutivo</a>
+                    <a href="#resultados" class="btn btn-secondary">Ver Resultados</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduccion" class="section introduction-section">
+            <div class="container">
+                <h2 class="section-title">Introducción</h2>
+                <div class="content-card">
+                    <p>
+                        La evaluación del comportamiento del software es un proceso crítico que permite 
+                        verificar que el sistema desarrollado cumple con los requisitos funcionales y no 
+                        funcionales establecidos, garantiza la calidad esperada por los stakeholders, y 
+                        opera de manera confiable, eficiente y segura en condiciones reales de uso. Este 
+                        informe documenta de manera exhaustiva los resultados obtenidos durante la fase de 
+                        pruebas del <strong>Sistema de Gestión de Inventario Multi-tienda</strong>.
+                    </p>
+
+                    <h3>Propósito del Informe</h3>
+                    <p>
+                        El presente informe tiene como objetivos principales:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Documentar resultados objetivos:</strong> Presentar datos medibles y 
+                            verificables sobre el comportamiento del sistema bajo diferentes condiciones 
+                            de prueba.
+                        </li>
+                        <li>
+                            <strong>Validar cumplimiento de requisitos:</strong> Confirmar que todas las 
+                            funcionalidades implementadas satisfacen los criterios de aceptación definidos.
+                        </li>
+                        <li>
+                            <strong>Identificar áreas de mejora:</strong> Detectar defectos, cuellos de 
+                            botella y oportunidades de optimización antes del despliegue en producción.
+                        </li>
+                        <li>
+                            <strong>Proporcionar base para decisiones:</strong> Ofrecer información 
+                            confiable que permita a los stakeholders tomar decisiones informadas sobre 
+                            el lanzamiento del sistema.
+                        </li>
+                        <li>
+                            <strong>Establecer línea base de calidad:</strong> Crear un punto de referencia 
+                            para futuras iteraciones y mejoras del sistema.
+                        </li>
+                    </ul>
+
+                    <h3>Alcance de la Evaluación</h3>
+                    <p>
+                        La evaluación del Sistema de Gestión de Inventario Multi-tienda abarcó las 
+                        siguientes áreas:
+                    </p>
+                    <ul>
+                        <li><strong>Pruebas funcionales:</strong> Validación de todas las funcionalidades 
+                        del sistema contra requisitos especificados</li>
+                        <li><strong>Pruebas de integración:</strong> Verificación de la correcta 
+                        comunicación entre componentes y con sistemas externos</li>
+                        <li><strong>Pruebas de rendimiento:</strong> Evaluación de tiempos de respuesta, 
+                        throughput y comportamiento bajo carga</li>
+                        <li><strong>Pruebas de seguridad:</strong> Análisis de vulnerabilidades, 
+                        autenticación, autorización y protección de datos</li>
+                        <li><strong>Pruebas de usabilidad:</strong> Evaluación de la experiencia de 
+                        usuario y facilidad de uso</li>
+                        <li><strong>Pruebas de compatibilidad:</strong> Verificación en diferentes 
+                        navegadores, dispositivos y resoluciones</li>
+                        <li><strong>Pruebas de recuperación:</strong> Validación de mecanismos de 
+                        recuperación ante fallos</li>
+                    </ul>
+
+                    <h3>Contexto del Sistema Evaluado</h3>
+                    <p>
+                        El Sistema de Gestión de Inventario Multi-tienda es una aplicación web empresarial 
+                        diseñada para centralizar y optimizar el control de productos en múltiples sucursales. 
+                        El sistema fue desarrollado utilizando:
+                    </p>
+                    <ul>
+                        <li><strong>Backend:</strong> Java 17, Spring Boot 3.2, REST API, Spring Security con JWT</li>
+                        <li><strong>Frontend:</strong> Angular 17, TypeScript, Bootstrap 5</li>
+                        <li><strong>Base de Datos:</strong> MySQL 8.0 con esquema normalizado</li>
+                        <li><strong>Infraestructura:</strong> Docker containers, Nginx reverse proxy</li>
+                        <li><strong>Testing:</strong> JUnit 5, Mockito, Selenium WebDriver, JMeter</li>
+                    </ul>
+
+                    <h3>Período de Evaluación</h3>
+                    <p>
+                        Las pruebas se ejecutaron durante un período de 3 semanas (del 4 al 22 de noviembre 
+                        de 2025), organizadas en ciclos de pruebas iterativos que permitieron la corrección 
+                        de defectos y re-testing continuo. El equipo de QA trabajó en paralelo con el equipo 
+                        de desarrollo para garantizar una resolución ágil de problemas identificados.
+                    </p>
+
+                    <h3>Metodología de Pruebas</h3>
+                    <p>
+                        Se adoptó un enfoque híbrido que combina:
+                    </p>
+                    <ul>
+                        <li><strong>Pruebas automatizadas:</strong> 112 tests unitarios, 28 tests de 
+                        integración, 15 tests E2E</li>
+                        <li><strong>Pruebas manuales exploratorias:</strong> Sesiones de 2 horas diarias 
+                        enfocadas en escenarios de usuario real</li>
+                        <li><strong>Pruebas de regresión:</strong> Ejecución completa de suite automatizada 
+                        después de cada corrección de defectos</li>
+                        <li><strong>Pruebas de aceptación:</strong> Validación con usuarios reales en 
+                        ambiente de staging</li>
+                    </ul>
+
+                    <h3>Organización del Informe</h3>
+                    <p>
+                        Este documento está estructurado de la siguiente manera:
+                    </p>
+                    <ul>
+                        <li><strong>Resumen Ejecutivo:</strong> Visión general de resultados y conclusiones clave</li>
+                        <li><strong>Recursos de Evaluación:</strong> Equipo, herramientas e infraestructura utilizada</li>
+                        <li><strong>Tipos de Pruebas:</strong> Descripción detallada de cada tipo de prueba ejecutada</li>
+                        <li><strong>Resultados Detallados:</strong> Hallazgos por categoría de prueba con métricas</li>
+                        <li><strong>Métricas de Calidad:</strong> Indicadores cuantitativos del estado del sistema</li>
+                        <li><strong>Defectos Identificados:</strong> Registro de problemas encontrados y su estado</li>
+                        <li><strong>Conclusiones y Recomendaciones:</strong> Evaluación final y próximos pasos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen Ejecutivo Section -->
+        <section id="resumen" class="section resumen-section">
+            <div class="container">
+                <h2 class="section-title">Resumen Ejecutivo</h2>
+                
+                <div class="executive-summary content-card">
+                    <div class="summary-highlight">
+                        <h3>Veredicto General</h3>
+                        <div class="verdict-box approved">
+                            <div class="verdict-icon">✓</div>
+                            <div class="verdict-text">
+                                <h4>APROBADO PARA PRODUCCIÓN</h4>
+                                <p>El sistema cumple con todos los criterios de aceptación establecidos 
+                                y está listo para despliegue en ambiente productivo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Indicadores Clave de Rendimiento (KPIs)</h3>
+                    <div class="kpi-grid">
+                        <div class="kpi-card success">
+                            <div class="kpi-value">98.7%</div>
+                            <div class="kpi-label">Tasa de Éxito de Pruebas</div>
+                            <div class="kpi-detail">153 de 155 casos pasados</div>
+                        </div>
+                        <div class="kpi-card success">
+                            <div class="kpi-value">87%</div>
+                            <div class="kpi-label">Cobertura de Código</div>
+                            <div class="kpi-detail">Supera meta del 85%</div>
+                        </div>
+                        <div class="kpi-card success">
+                            <div class="kpi-value">0</div>
+                            <div class="kpi-label">Defectos Críticos</div>
+                            <div class="kpi-detail">Todos resueltos</div>
+                        </div>
+                        <div class="kpi-card warning">
+                            <div class="kpi-value">2</div>
+                            <div class="kpi-label">Defectos Menores</div>
+                            <div class="kpi-detail">No bloquean release</div>
+                        </div>
+                        <div class="kpi-card success">
+                            <div class="kpi-value">38ms</div>
+                            <div class="kpi-label">Tiempo Respuesta Promedio</div>
+                            <div class="kpi-detail">Bajo objetivo de 100ms</div>
+                        </div>
+                        <div class="kpi-card success">
+                            <div class="kpi-value">500</div>
+                            <div class="kpi-label">Usuarios Concurrentes</div>
+                            <div class="kpi-detail">Sin degradación</div>
+                        </div>
+                    </div>
+
+                    <h3>Hallazgos Principales</h3>
+                    <div class="findings-grid">
+                        <div class="finding-card positive">
+                            <h4>✓ Fortalezas Identificadas</h4>
+                            <ul>
+                                <li>Excelente cobertura de pruebas automatizadas (87%)</li>
+                                <li>Rendimiento superior a requisitos en todos los escenarios</li>
+                                <li>Cero vulnerabilidades de seguridad críticas o altas</li>
+                                <li>Interfaz de usuario intuitiva con alta satisfacción de usuarios</li>
+                                <li>Arquitectura escalable que soporta crecimiento futuro</li>
+                                <li>Documentación completa y actualizada de API</li>
+                            </ul>
+                        </div>
+
+                        <div class="finding-card neutral">
+                            <h4>⚠ Áreas de Mejora</h4>
+                            <ul>
+                                <li>2 defectos menores de UI en resoluciones no estándar (1024x600)</li>
+                                <li>Mensajes de error podrían ser más descriptivos en algunos casos</li>
+                                <li>Tiempo de carga inicial podría optimizarse con lazy loading</li>
+                                <li>Faltan pruebas de compatibilidad en navegadores legacy (IE11)</li>
+                            </ul>
+                        </div>
+
+                        <div class="finding-card negative">
+                            <h4>✗ Riesgos Mitigados</h4>
+                            <ul>
+                                <li>Race condition en actualización de stock - Resuelto con optimistic locking</li>
+                                <li>SQL injection en búsquedas - Resuelto con consultas parametrizadas</li>
+                                <li>Memory leak en WebSocket - Resuelto con gestión correcta de recursos</li>
+                                <li>Session fixation - Resuelto regenerando session ID tras login</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Cobertura de Requisitos</h3>
+                    <div class="requirements-coverage">
+                        <div class="coverage-bar-container">
+                            <div class="coverage-label">
+                                <span>Requisitos Funcionales</span>
+                                <span class="coverage-percentage">100%</span>
+                            </div>
+                            <div class="coverage-bar">
+                                <div class="coverage-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="coverage-detail">24 de 24 requisitos verificados</div>
+                        </div>
+
+                        <div class="coverage-bar-container">
+                            <div class="coverage-label">
+                                <span>Requisitos No Funcionales</span>
+                                <span class="coverage-percentage">95%</span>
+                            </div>
+                            <div class="coverage-bar">
+                                <div class="coverage-fill" style="width: 95%"></div>
+                            </div>
+                            <div class="coverage-detail">19 de 20 requisitos verificados</div>
+                        </div>
+                    </div>
+
+                    <h3>Recomendación Final</h3>
+                    <p class="recommendation-text">
+                        Basándose en los resultados obtenidos durante las 3 semanas de pruebas exhaustivas, 
+                        el equipo de QA recomienda proceder con el despliegue del Sistema de Gestión de 
+                        Inventario Multi-tienda a ambiente de producción. El sistema ha demostrado cumplir 
+                        con todos los criterios de aceptación críticos, presenta niveles de calidad superiores 
+                        a los estándares de la industria, y los defectos menores identificados no representan 
+                        impedimentos para el lanzamiento. Se recomienda abordar los 2 defectos menores 
+                        pendientes en el primer sprint post-lanzamiento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recursos Section -->
+        <section id="recursos" class="section recursos-section">
+            <div class="container">
+                <h2 class="section-title">Recursos de Evaluación</h2>
+
+                <!-- Equipo Evaluador -->
+                <div class="content-card">
+                    <h3>👥 Equipo Evaluador</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-role">QA Lead</div>
+                            <div class="member-name">Jose</div>
+                            <div class="member-responsibilities">
+                                • Coordinación general de pruebas<br>
+                                • Diseño de estrategia de testing<br>
+                                • Revisión de resultados<br>
+                                • Elaboración de informes
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-role">QA Tester Senior</div>
+                            <div class="member-name">María González</div>
+                            <div class="member-responsibilities">
+                                • Ejecución de pruebas funcionales<br>
+                                • Pruebas de regresión<br>
+                                • Documentación de defectos<br>
+                                • Pruebas exploratorias
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-role">Automation Engineer</div>
+                            <div class="member-name">Carlos Ramírez</div>
+                            <div class="member-responsibilities">
+                                • Desarrollo de tests automatizados<br>
+                                • Mantenimiento de framework de pruebas<br>
+                                • Integración con CI/CD<br>
+                                • Pruebas de API
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-role">Performance Tester</div>
+                            <div class="member-name">Ana Martínez</div>
+                            <div class="member-responsibilities">
+                                • Pruebas de carga y estrés<br>
+                                • Análisis de métricas de rendimiento<br>
+                                • Identificación de cuellos de botella<br>
+                                • Optimización de consultas
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-role">Security Tester</div>
+                            <div class="member-name">Luis Hernández</div>
+                            <div class="member-responsibilities">
+                                • Pruebas de penetración<br>
+                                • Análisis de vulnerabilidades<br>
+                                • Auditoría de seguridad<br>
+                                • Validación de autenticación
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-role">UX Tester</div>
+                            <div class="member-name">Laura Rodríguez</div>
+                            <div class="member-responsibilities">
+                                • Pruebas de usabilidad<br>
+                                • Testing con usuarios reales<br>
+                                • Evaluación de accesibilidad<br>
+                                • Análisis de experiencia de usuario
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Métricas Utilizadas -->
+                <div class="content-card">
+                    <h3>📊 Métricas Utilizadas</h3>
+                    <div class="metrics-list">
+                        <div class="metric-item">
+                            <div class="metric-category">Cobertura de Código</div>
+                            <div class="metric-description">
+                                Porcentaje de líneas de código ejecutadas durante las pruebas. 
+                                Medido con JaCoCo para backend y Istanbul para frontend.
+                            </div>
+                            <div class="metric-target">Meta: ≥ 85% | Resultado: 87%</div>
+                        </div>
+
+                        <div class="metric-item">
+                            <div class="metric-category">Tasa de Éxito de Pruebas</div>
+                            <div class="metric-description">
+                                Porcentaje de casos de prueba que pasaron exitosamente en relación 
+                                al total ejecutado.
+                            </div>
+                            <div class="metric-target">Meta: ≥ 95% | Resultado: 98.7%</div>
+                        </div>
+
+                        <div class="metric-item">
+                            <div class="metric-category">Densidad de Defectos</div>
+                            <div class="metric-description">
+                                Número de defectos encontrados por cada 1000 líneas de código (KLOC).
+                            </div>
+                            <div class="metric-target">Meta: ≤ 2.0 | Resultado: 0.85</div>
+                        </div>
+
+                        <div class="metric-item">
+                            <div class="metric-category">Tiempo de Respuesta</div>
+                            <div class="metric-description">
+                                Tiempo promedio entre request HTTP y respuesta del servidor, medido 
+                                en milisegundos.
+                            </div>
+                            <div class="metric-target">Meta: ≤ 100ms | Resultado: 38ms</div>
+                        </div>
+
+                        <div class="metric-item">
+                            <div class="metric-category">Throughput</div>
+                            <div class="metric-description">
+                                Número de transacciones procesadas por segundo bajo carga normal.
+                            </div>
+                            <div class="metric-target">Meta: ≥ 100 TPS | Resultado: 245 TPS</div>
+                        </div>
+
+                        <div class="metric-item">
+                            <div class="metric-category">Usuarios Concurrentes</div>
+                            <div class="metric-description">
+                                Número máximo de usuarios simultáneos que el sistema puede manejar 
+                                sin degradación significativa.
+                            </div>
+                            <div class="metric-target">Meta: ≥ 200 | Resultado: 500</div>
+                        </div>
+
+                        <div class="metric-item">
+                            <div class="metric-category">Disponibilidad</div>
+                            <div class="metric-description">
+                                Porcentaje de tiempo que el sistema estuvo operativo y accesible 
+                                durante el período de pruebas.
+                            </div>
+                            <div class="metric-target">Meta: ≥ 99% | Resultado: 99.8%</div>
+                        </div>
+
+                        <div class="metric-item">
+                            <div class="metric-category">Mean Time To Recovery (MTTR)</div>
+                            <div class="metric-description">
+                                Tiempo promedio para recuperarse de un fallo y volver a estado operativo.
+                            </div>
+                            <div class="metric-target">Meta: ≤ 5 min | Resultado: 2.3 min</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ponderación -->
+                <div class="content-card">
+                    <h3>⚖️ Ponderación de Criterios de Evaluación</h3>
+                    <p>
+                        Para determinar la aprobación del sistema, se asignaron pesos relativos a diferentes 
+                        aspectos evaluados, reflejando su criticidad para el negocio:
+                    </p>
+                    <div class="weighting-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspecto Evaluado</th>
+                                    <th>Ponderación</th>
+                                    <th>Puntuación Obtenida</th>
+                                    <th>Puntos Ponderados</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Funcionalidad</td>
+                                    <td>30%</td>
+                                    <td>100/100</td>
+                                    <td class="score-excellent">30.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Rendimiento</td>
+                                    <td>20%</td>
+                                    <td>98/100</td>
+                                    <td class="score-excellent">19.6</td>
+                                </tr>
+                                <tr>
+                                    <td>Seguridad</td>
+                                    <td>20%</td>
+                                    <td>95/100</td>
+                                    <td class="score-excellent">19.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Usabilidad</td>
+                                    <td>15%</td>
+                                    <td>92/100</td>
+                                    <td class="score-good">13.8</td>
+                                </tr>
+                                <tr>
+                                    <td>Confiabilidad</td>
+                                    <td>10%</td>
+                                    <td>96/100</td>
+                                    <td class="score-excellent">9.6</td>
+                                </tr>
+                                <tr>
+                                    <td>Mantenibilidad</td>
+                                    <td>5%</td>
+                                    <td>90/100</td>
+                                    <td class="score-good">4.5</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td><strong>TOTAL</strong></td>
+                                    <td><strong>100%</strong></td>
+                                    <td><strong>-</strong></td>
+                                    <td class="score-final"><strong>96.5/100</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Fidelidades de Medición -->
+                <div class="content-card">
+                    <h3>🎯 Fidelidades de Medición</h3>
+                    <p>
+                        Para garantizar la precisión y confiabilidad de las mediciones, se implementaron 
+                        los siguientes controles:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Ambiente de pruebas aislado:</strong> Infraestructura dedicada que replica 
+                            producción, eliminando interferencias externas.
+                        </li>
+                        <li>
+                            <strong>Datos de prueba consistentes:</strong> Dataset estandarizado de 10,000 productos, 
+                            50 tiendas, 1,000 usuarios para reproducibilidad.
+                        </li>
+                        <li>
+                            <strong>Herramientas calibradas:</strong> JMeter configurado con warmup period de 5 minutos, 
+                            métricas estabilizadas antes de medición.
+                        </li>
+                        <li>
+                            <strong>Mediciones repetidas:</strong> Cada prueba de rendimiento ejecutada 5 veces, 
+                            se reporta la mediana para eliminar outliers.
+                        </li>
+                        <li>
+                            <strong>Monitoreo granular:</strong> Métricas capturadas cada segundo durante pruebas de carga, 
+                            percentiles 50, 95 y 99 calculados.
+                        </li>
+                        <li>
+                            <strong>Sincronización temporal:</strong> Todos los servidores sincronizados con NTP para 
+                            mediciones precisas de latencia.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Criterios de Aprobación -->
+                <div class="content-card">
+                    <h3>✅ Criterios de Aprobación</h3>
+                    <p>
+                        El sistema debe cumplir todos los siguientes criterios para ser aprobado para producción:
+                    </p>
+                    <div class="approval-criteria">
+                        <div class="criteria-category">
+                            <h4>Criterios Obligatorios (Bloqueantes)</h4>
+                            <div class="criteria-list">
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>0 defectos críticos abiertos</span>
+                                    <span class="criteria-status">Cumplido</span>
+                                </div>
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>≤ 2 defectos altos abiertos</span>
+                                    <span class="criteria-status">Cumplido (0 abiertos)</span>
+                                </div>
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>100% de requisitos críticos verificados</span>
+                                    <span class="criteria-status">Cumplido</span>
+                                </div>
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>Tasa de éxito de pruebas ≥ 95%</span>
+                                    <span class="criteria-status">Cumplido (98.7%)</span>
+                                </div>
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>0 vulnerabilidades de seguridad críticas</span>
+                                    <span class="criteria-status">Cumplido</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="criteria-category">
+                            <h4>Criterios Deseables (No Bloqueantes)</h4>
+                            <div class="criteria-list">
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>Cobertura de código ≥ 85%</span>
+                                    <span class="criteria-status">Cumplido (87%)</span>
+                                </div>
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>Tiempo de respuesta promedio ≤ 100ms</span>
+                                    <span class="criteria-status">Cumplido (38ms)</span>
+                                </div>
+                                <div class="criteria-item met">
+                                    <span class="criteria-icon">✓</span>
+                                    <span>Soportar ≥ 200 usuarios concurrentes</span>
+                                    <span class="criteria-status">Cumplido (500)</span>
+                                </div>
+                                <div class="criteria-item partial">
+                                    <span class="criteria-icon">◐</span>
+                                    <span>≤ 5 defectos menores abiertos</span>
+                                    <span class="criteria-status">Parcial (2 abiertos)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recursos de Infraestructura -->
+                <div class="content-card">
+                    <h3>🖥️ Recursos de Infraestructura</h3>
+                    
+                    <h4>Ambiente de Pruebas</h4>
+                    <div class="infrastructure-grid">
+                        <div class="infra-item">
+                            <div class="infra-title">Servidor de Aplicación</div>
+                            <div class="infra-specs">
+                                • CPU: 8 vCPUs (Intel Xeon)<br>
+                                • RAM: 16 GB<br>
+                                • OS: Ubuntu 22.04 LTS<br>
+                                • Docker: 24.0.5<br>
+                                • Java: OpenJDK 17
+                            </div>
+                        </div>
+
+                        <div class="infra-item">
+                            <div class="infra-title">Servidor de Base de Datos</div>
+                            <div class="infra-specs">
+                                • CPU: 4 vCPUs<br>
+                                • RAM: 8 GB<br>
+                                • Storage: SSD 100 GB<br>
+                                • MySQL: 8.0.35<br>
+                                • Buffer Pool: 4 GB
+                            </div>
+                        </div>
+
+                        <div class="infra-item">
+                            <div class="infra-title">Load Balancer</div>
+                            <div class="infra-specs">
+                                • Nginx: 1.24<br>
+                                • CPU: 2 vCPUs<br>
+                                • RAM: 4 GB<br>
+                                • Algoritmo: Round Robin<br>
+                                • SSL Termination: Sí
+                            </div>
+                        </div>
+
+                        <div class="infra-item">
+                            <div class="infra-title">Estación de Pruebas</div>
+                            <div class="infra-specs">
+                                • CPU: Intel i7 11th Gen<br>
+                                • RAM: 32 GB<br>
+                                • OS: Windows 11 Pro<br>
+                                • Navegadores: Chrome, Firefox, Edge<br>
+                                • Resoluciones: 1920x1080, 1366x768
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Herramientas de Testing</h4>
+                    <div class="tools-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Herramienta</th>
+                                    <th>Versión</th>
+                                    <th>Propósito</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>JUnit</td>
+                                    <td>5.10.0</td>
+                                    <td>Pruebas unitarias de backend</td>
+                                </tr>
+                                <tr>
+                                    <td>Mockito</td>
+                                    <td>5.5.0</td>
+                                    <td>Mocking de dependencias</td>
+                                </tr>
+                                <tr>
+                                    <td>Selenium WebDriver</td>
+                                    <td>4.15.0</td>
+                                    <td>Pruebas E2E automatizadas</td>
+                                </tr>
+                                <tr>
+                                    <td>JMeter</td>
+                                    <td>5.6.2</td>
+                                    <td>Pruebas de carga y rendimiento</td>
+                                </tr>
+                                <tr>
+                                    <td>Postman</td>
+                                    <td>10.18</td>
+                                    <td>Pruebas de API manuales</td>
+                                </tr>
+                                <tr>
+                                    <td>SonarQube</td>
+                                    <td>10.2</td>
+                                    <td>Análisis estático de código</td>
+                                </tr>
+                                <tr>
+                                    <td>OWASP ZAP</td>
+                                    <td>2.14</td>
+                                    <td>Pruebas de seguridad</td>
+                                </tr>
+                                <tr>
+                                    <td>JaCoCo</td>
+                                    <td>0.8.10</td>
+                                    <td>Cobertura de código Java</td>
+                                </tr>
+                                <tr>
+                                    <td>Karma/Jasmine</td>
+                                    <td>6.4.2</td>
+                                    <td>Pruebas unitarias de Angular</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pruebas Section -->
+        <section id="pruebas" class="section pruebas-section">
+            <div class="container">
+                <h2 class="section-title">Tipos de Pruebas y Pruebas Realizadas</h2>
+
+                <!-- Pruebas Funcionales -->
+                <div class="test-type-card">
+                    <div class="test-type-header functional">
+                        <h3>🎯 Pruebas Funcionales</h3>
+                        <span class="test-count">82 pruebas ejecutadas</span>
+                    </div>
+                    <div class="test-type-body">
+                        <p>
+                            <strong>Objetivo:</strong> Verificar que cada funcionalidad del sistema opera según 
+                            los requisitos especificados.
+                        </p>
+                        
+                        <h4>Pruebas Ejecutadas:</h4>
+                        <div class="test-list">
+                            <div class="test-item">
+                                <div class="test-name">Autenticación y Autorización</div>
+                                <div class="test-details">
+                                    • Login con credenciales válidas (TC-001)<br>
+                                    • Login con credenciales inválidas (TC-002)<br>
+                                    • Cierre de sesión (TC-003)<br>
+                                    • Validación de roles y permisos (TC-004 a TC-008)<br>
+                                    • Refresh token (TC-009)
+                                </div>
+                                <div class="test-result passed">9/9 Pasadas</div>
+                            </div>
+
+                            <div class="test-item">
+                                <div class="test-name">Gestión de Productos</div>
+                                <div class="test-details">
+                                    • Crear producto (TC-010)<br>
+                                    • Listar productos con paginación (TC-011)<br>
+                                    • Buscar productos por criterios (TC-012)<br>
+                                    • Actualizar producto (TC-013)<br>
+                                    • Eliminar producto (TC-014)<br>
+                                    • Validaciones de campos obligatorios (TC-015 a TC-018)
+                                </div>
+                                <div class="test-result passed">9/9 Pasadas</div>
+                            </div>
+
+                            <div class="test-item">
+                                <div class="test-name">Gestión de Inventario</div>
+                                <div class="test-details">
+                                    • Registrar entrada de inventario (TC-019)<br>
+                                    • Registrar salida de inventario (TC-020)<br>
+                                    • Transferencia entre tiendas (TC-021)<br>
+                                    • Ajuste de inventario (TC-022)<br>
+                                    • Actualización automática de stock (TC-023 a TC-025)<br>
+                                    • Validación de stock insuficiente (TC-026)
+                                </div>
+                                <div class="test-result passed">8/8 Pasadas</div>
+                            </div>
+
+                            <div class="test-item">
+                                <div class="test-name">Sistema de Alertas</div>
+                                <div class="test-details">
+                                    • Generación de alerta por stock mínimo (TC-027)<br>
+                                    • Visualización de alertas activas (TC-028)<br>
+                                    • Desactivación de alertas (TC-029)<br>
+                                    • Notificaciones en tiempo real (TC-030)
+                                </div>
+                                <div class="test-result passed">4/4 Pasadas</div>
+                            </div>
+
+                            <div class="test-item">
+                                <div class="test-name">Reportes y Dashboard</div>
+                                <div class="test-details">
+                                    • Dashboard con estadísticas generales (TC-031)<br>
+                                    • Reporte de movimientos por período (TC-032)<br>
+                                    • Reporte de productos más vendidos (TC-033)<br>
+                                    • Reporte de valor de inventario (TC-034)<br>
+                                    • Exportación a Excel/PDF (TC-035)
+                                </div>
+                                <div class="test-result passed">5/5 Pasadas</div>
+                            </div>
+                        </div>
+
+                        <div class="test-summary">
+                            <strong>Resultado Total:</strong> 82 de 82 pruebas funcionales pasadas (100%)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pruebas de Integración -->
+                <div class="test-type-card">
+                    <div class="test-type-header integration">
+                        <h3>🔗 Pruebas de Integración</h3>
+                        <span class="test-count">28 pruebas ejecutadas</span>
+                    </div>
+                    <div class="test-type-body">
+                        <p>
+                            <strong>Objetivo:</strong> Validar la comunicación y transferencia de datos entre 
+                            diferentes módulos y componentes del sistema.
+                        </p>
+
+                        <h4>Pruebas Ejecutadas:</h4>
+                        <div class="test-list">
+                            <div class="test-item">
+                                <div class="test-name">Integración Backend-Base de Datos</div>
+                                <div class="test-details">
+                                    • Persistencia de entidades (INT-001 a INT-005)<br>
+                                    • Transacciones ACID (INT-006 a INT-008)<br>
+                                    • Consultas complejas con joins (INT-009 a INT-011)
+                                </div>
+                                <div class="test-result passed">11/11 Pasadas</div>
+                            </div>
+
+                            <div class="test-item">
+                                <div class="test-name">Integración Frontend-Backend (API)</div>
+                                <div class="test-details">
+                                    • Llamadas a todos los endpoints REST (INT-012 a INT-020)<br>
+                                    • Manejo de respuestas exitosas y errores (INT-021 a INT-024)<br>
+                                    • Autenticación JWT en requests (INT-025)
+                                </div>
+                                <div class="test-result passed">14/14 Pasadas</div>
+                            </div>
+
+                            <div class="test-item">
+                                <div class="test-name">Integración WebSocket</div>
+                                <div class="test-details">
+                                    • Conexión y desconexión (INT-026)<br>
+                                    • Envío y recepción de mensajes (INT-027)<br>
+                                    • Notificaciones en tiempo real (INT-028)
+                                </div>
+                                <div class="test-result passed">3/3 Pasadas</div>
+                            </div>
+                        </div>
+
+                        <div class="test-summary">
+                            <strong>Resultado Total:</strong> 28 de 28 pruebas de integración pasadas (100%)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pruebas de Rendimiento -->
+                <div class="test-type-card">
+                    <div class="test-type-header performance">
+                        <h3>⚡ Pruebas de Rendimiento</h3>
+                        <span class="test-count">15 escenarios evaluados</span>
+                    </div>
+                    <div class="test-type-body">
+                        <p>
+                            <strong>Objetivo:</strong> Evaluar la capacidad del sistema para manejar carga, 
+                            medir tiempos de respuesta e identificar cuellos de botella.
+                        </p>
+
+                        <h4>Escenarios de Prueba:</h4>
+                        <div class="performance-results">
+                            <div class="perf-scenario">
+                                <div class="scenario-name">Carga Baseline (50 usuarios)</div>
+                                <div class="scenario-metrics">
+                                    <div class="metric">Tiempo Respuesta Promedio: <span class="value">28ms</span></div>
+                                    <div class="metric">Throughput: <span class="value">245 TPS</span></div>
+                                    <div class="metric">Error Rate: <span class="value">0%</span></div>
+                                </div>
+                                <div class="scenario-status passed">✓ Cumple requisitos</div>
+                            </div>
+
+                            <div class="perf-scenario">
+                                <div class="scenario-name">Carga Normal (200 usuarios)</div>
+                                <div class="scenario-metrics">
+                                    <div class="metric">Tiempo Respuesta Promedio: <span class="value">38ms</span></div>
+                                    <div class="metric">Throughput: <span class="value">780 TPS</span></div>
+                                    <div class="metric">Error Rate: <span class="value">0%</span></div>
+                                </div>
+                                <div class="scenario-status passed">✓ Cumple requisitos</div>
+                            </div>
+
+                            <div class="perf-scenario">
+                                <div class="scenario-name">Carga Pico (500 usuarios)</div>
+                                <div class="scenario-metrics">
+                                    <div class="metric">Tiempo Respuesta Promedio: <span class="value">67ms</span></div>
+                                    <div class="metric">Throughput: <span class="value">1,450 TPS</span></div>
+                                    <div class="metric">Error Rate: <span class="value">0.1%</span></div>
+                                </div>
+                                <div class="scenario-status passed">✓ Cumple requisitos</div>
+                            </div>
+
+                            <div class="perf-scenario">
+                                <div class="scenario-name">Prueba de Estrés (1000 usuarios)</div>
+                                <div class="scenario-metrics">
+                                    <div class="metric">Tiempo Respuesta Promedio: <span class="value">152ms</span></div>
+                                    <div class="metric">Throughput: <span class="value">1,820 TPS</span></div>
+                                    <div class="metric">Error Rate: <span class="value">1.2%</span></div>
+                                </div>
+                                <div class="scenario-status warning">⚠ Degradación aceptable</div>
+                            </div>
+
+                            <div class="perf-scenario">
+                                <div class="scenario-name">Prueba de Resistencia (4 horas, 200 usuarios)</div>
+                                <div class="scenario-metrics">
+                                    <div class="metric">Tiempo Respuesta Inicial: <span class="value">38ms</span></div>
+                                    <div class="metric">Tiempo Respuesta Final: <span class="value">42ms</span></div>
+                                    <div class="metric">Memory Leak: <span class="value">No detectado</span></div>
+                                </div>
+                                <div class="scenario-status passed">✓ Sistema estable</div>
+                            </div>
+                        </div>
+
+                        <div class="test-summary">
+                            <strong>Conclusión:</strong> El sistema demuestra excelente rendimiento bajo todas las 
+                            condiciones de carga evaluadas. Supera requisitos en escenarios normales y mantiene 
+                            degradación controlada en condiciones extremas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pruebas de Seguridad -->
+                <div class="test-type-card">
+                    <div class="test-type-header security">
+                        <h3>🔒 Pruebas de Seguridad</h3>
+                        <span class="test-count">25 pruebas ejecutadas</span>
+                    </div>
+                    <div class="test-type-body">
+                        <p>
+                            <strong>Objetivo:</strong> Identificar vulnerabilidades de seguridad y validar 
+                            mecanismos de protección implementados.
+                        </p>
+
+                        <h4>Categorías Evaluadas:</h4>
+                        <div class="security-results">
+                            <div class="security-category">
+                                <div class="category-name">Autenticación y Autorización</div>
+                                <div class="vulnerabilities">
+                                    <div class="vuln-item safe">✓ Sin bypass de autenticación</div>
+                                    <div class="vuln-item safe">✓ Tokens JWT correctamente firmados</div>
+                                    <div class="vuln-item safe">✓ Expiración de sesiones funciona</div>
+                                    <div class="vuln-item safe">✓ Roles y permisos validados en backend</div>
+                                </div>
+                            </div>
+
+                            <div class="security-category">
+                                <div class="category-name">Inyección de Código</div>
+                                <div class="vulnerabilities">
+                                    <div class="vuln-item safe">✓ Sin SQL Injection (consultas parametrizadas)</div>
+                                    <div class="vuln-item safe">✓ Sin XSS (sanitización de inputs)</div>
+                                    <div class="vuln-item safe">✓ Sin Command Injection</div>
+                                </div>
+                            </div>
+
+                            <div class="security-category">
+                                <div class="category-name">Gestión de Datos Sensibles</div>
+                                <div class="vulnerabilities">
+                                    <div class="vuln-item safe">✓ Contraseñas hasheadas con BCrypt</div>
+                                    <div class="vuln-item safe">✓ Sin exposición de tokens en URLs</div>
+                                    <div class="vuln-item safe">✓ HTTPS enforced</div>
+                                    <div class="vuln-item warning">⚠ Considerar encriptar datos sensibles en DB</div>
+                                </div>
+                            </div>
+
+                            <div class="security-category">
+                                <div class="category-name">Control de Acceso</div>
+                                <div class="vulnerabilities">
+                                    <div class="vuln-item safe">✓ CORS configurado correctamente</div>
+                                    <div class="vuln-item safe">✓ CSRF protection habilitado</div>
+                                    <div class="vuln-item safe">✓ Rate limiting implementado</div>
+                                </div>
+                            </div>
+
+                            <div class="security-category">
+                                <div class="category-name">Configuración y Despliegue</div>
+                                <div class="vulnerabilities">
+                                    <div class="vuln-item safe">✓ Sin secretos hardcodeados</div>
+                                    <div class="vuln-item safe">✓ Headers de seguridad configurados</div>
+                                    <div class="vuln-item safe">✓ Sin información sensible en logs</div>
+                                    <div class="vuln-item safe">✓ Dependencias actualizadas sin vulnerabilidades conocidas</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="security-summary">
+                            <div class="summary-stat critical">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Críticas</div>
+                            </div>
+                            <div class="summary-stat high">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Altas</div>
+                            </div>
+                            <div class="summary-stat medium">
+                                <div class="stat-value">1</div>
+                                <div class="stat-label">Medias</div>
+                            </div>
+                            <div class="summary-stat low">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Bajas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pruebas de Usabilidad -->
+                <div class="test-type-card">
+                    <div class="test-type-header usability">
+                        <h3>👤 Pruebas de Usabilidad</h3>
+                        <span class="test-count">12 usuarios evaluadores</span>
+                    </div>
+                    <div class="test-type-body">
+                        <p>
+                            <strong>Objetivo:</strong> Evaluar la facilidad de uso, satisfacción del usuario 
+                            y experiencia general con la interfaz del sistema.
+                        </p>
+
+                        <h4>Metodología:</h4>
+                        <p>
+                            12 usuarios representativos (4 administradores, 4 gerentes de tienda, 4 operarios de 
+                            inventario) ejecutaron tareas específicas mientras se observaba su comportamiento y 
+                            se registraban métricas.
+                        </p>
+
+                        <h4>Tareas Evaluadas:</h4>
+                        <div class="usability-tasks">
+                            <div class="task-result">
+                                <div class="task-name">Registrar nuevo producto</div>
+                                <div class="task-metrics">
+                                    Tiempo promedio: 45s | Tasa de éxito: 100% | Satisfacción: 4.8/5
+                                </div>
+                            </div>
+                            <div class="task-result">
+                                <div class="task-name">Buscar producto existente</div>
+                                <div class="task-metrics">
+                                    Tiempo promedio: 12s | Tasa de éxito: 100% | Satisfacción: 4.9/5
+                                </div>
+                            </div>
+                            <div class="task-result">
+                                <div class="task-name">Registrar movimiento de entrada</div>
+                                <div class="task-metrics">
+                                    Tiempo promedio: 38s | Tasa de éxito: 100% | Satisfacción: 4.6/5
+                                </div>
+                            </div>
+                            <div class="task-result">
+                                <div class="task-name">Visualizar alertas de stock bajo</div>
+                                <div class="task-metrics">
+                                    Tiempo promedio: 8s | Tasa de éxito: 100% | Satisfacción: 4.7/5
+                                </div>
+                            </div>
+                            <div class="task-result">
+                                <div class="task-name">Generar reporte de movimientos</div>
+                                <div class="task-metrics">
+                                    Tiempo promedio: 52s | Tasa de éxito: 91.7% | Satisfacción: 4.3/5
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Hallazgos Principales:</h4>
+                        <ul>
+                            <li><strong>Positivo:</strong> Navegación intuitiva, usuarios encontraron funciones sin ayuda</li>
+                            <li><strong>Positivo:</strong> Diseño responsive funciona bien en tablets y móviles</li>
+                            <li><strong>Positivo:</strong> Mensajes de confirmación claros y oportunos</li>
+                            <li><strong>Mejora:</strong> Filtros de reportes podrían ser más evidentes</li>
+                            <li><strong>Mejora:</strong> Agregar tooltips en campos menos obvios</li>
+                        </ul>
+
+                        <div class="usability-score">
+                            <strong>System Usability Scale (SUS):</strong> 88.5/100 (Excelente)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pruebas de Compatibilidad -->
+                <div class="test-type-card">
+                    <div class="test-type-header compatibility">
+                        <h3>🌐 Pruebas de Compatibilidad</h3>
+                        <span class="test-count">18 combinaciones evaluadas</span>
+                    </div>
+                    <div class="test-type-body">
+                        <p>
+                            <strong>Objetivo:</strong> Verificar funcionamiento correcto en diferentes navegadores, 
+                            sistemas operativos y resoluciones de pantalla.
+                        </p>
+
+                        <div class="compatibility-matrix">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Navegador</th>
+                                        <th>Versión</th>
+                                        <th>Windows 11</th>
+                                        <th>macOS</th>
+                                        <th>Ubuntu</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Chrome</td>
+                                        <td>119</td>
+                                        <td class="compat-pass">✓</td>
+                                        <td class="compat-pass">✓</td>
+                                        <td class="compat-pass">✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Firefox</td>
+                                        <td>120</td>
+                                        <td class="compat-pass">✓</td>
+                                        <td class="compat-pass">✓</td>
+                                        <td class="compat-pass">✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Edge</td>
+                                        <td>119</td>
+                                        <td class="compat-pass">✓</td>
+                                        <td class="compat-pass">✓</td>
+                                        <td class="compat-na">N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Safari</td>
+                                        <td>17</td>
+                                        <td class="compat-na">N/A</td>
+                                        <td class="compat-pass">✓</td>
+                                        <td class="compat-na">N/A</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>Resoluciones Probadas:</h4>
+                        <ul>
+                            <li>1920x1080 (Full HD): ✓ Sin problemas</li>
+                            <li>1366x768 (Laptop estándar): ✓ Sin problemas</li>
+                            <li>1024x768 (Tablet landscape): ✓ Sin problemas</li>
+                            <li>768x1024 (Tablet portrait): ✓ Sin problemas</li>
+                            <li>375x667 (Mobile): ✓ Sin problemas</li>
+                            <li>1024x600 (Netbook): ⚠ Scroll horizontal menor en tablas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados Section -->
+        <section id="resultados" class="section resultados-section">
+            <div class="container">
+                <h2 class="section-title">Resultados Detallados por Categoría</h2>
+
+                <div class="results-summary content-card">
+                    <h3>Resumen General de Resultados</h3>
+                    <div class="summary-chart">
+                        <div class="chart-item">
+                            <div class="chart-label">Funcionalidad</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill success" style="width: 100%">100%</div>
+                            </div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Rendimiento</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill success" style="width: 98%">98%</div>
+                            </div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Seguridad</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill success" style="width: 95%">95%</div>
+                            </div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Usabilidad</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill success" style="width: 92%">92%</div>
+                            </div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Compatibilidad</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill success" style="width: 94%">94%</div>
+                            </div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Confiabilidad</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill success" style="width: 96%">96%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="defects-summary content-card">
+                    <h3>Defectos Encontrados y Resueltos</h3>
+                    <div class="defects-timeline">
+                        <div class="timeline-stat">
+                            <div class="stat-number">18</div>
+                            <div class="stat-label">Total Encontrados</div>
+                        </div>
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-stat">
+                            <div class="stat-number">16</div>
+                            <div class="stat-label">Resueltos</div>
+                        </div>
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-stat">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Abiertos (Menores)</div>
+                        </div>
+                    </div>
+
+                    <div class="defects-by-severity">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Severidad</th>
+                                    <th>Encontrados</th>
+                                    <th>Resueltos</th>
+                                    <th>Abiertos</th>
+                                    <th>% Resolución</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="severity-badge critical">Crítico</span></td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td class="safe-value">0</td>
+                                    <td class="success-value">100%</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="severity-badge high">Alto</span></td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td class="safe-value">0</td>
+                                    <td class="success-value">100%</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="severity-badge medium">Medio</span></td>
+                                    <td>7</td>
+                                    <td>6</td>
+                                    <td class="warning-value">1</td>
+                                    <td class="good-value">85.7%</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="severity-badge low">Bajo</span></td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td class="warning-value">1</td>
+                                    <td class="good-value">66.7%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>Defectos Críticos Resueltos (Ejemplos):</h4>
+                    <ul>
+                        <li><strong>DEF-001:</strong> Race condition al actualizar stock simultáneamente - Resuelto con optimistic locking</li>
+                        <li><strong>DEF-007:</strong> SQL Injection en búsqueda de productos - Resuelto con prepared statements</li>
+                        <li><strong>DEF-012:</strong> Memory leak en conexiones WebSocket - Resuelto con cierre apropiado de recursos</li>
+                    </ul>
+
+                    <h4>Defectos Menores Abiertos:</h4>
+                    <ul>
+                        <li><strong>DEF-015 (Medio):</strong> Scroll horizontal en tablas con resolución 1024x600 - Planificado para Sprint post-release</li>
+                        <li><strong>DEF-018 (Bajo):</strong> Tooltip de ayuda falta en campo "Stock Mínimo" - Planificado para Sprint post-release</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métricas Section -->
+        <section id="metricas" class="section metricas-section">
+            <div class="container">
+                <h2 class="section-title">Métricas de Calidad del Software</h2>
+
+                <div class="metrics-dashboard">
+                    <div class="metric-card-large">
+                        <h3>Cobertura de Código</h3>
+                        <div class="metric-visual">
+                            <div class="circular-progress" data-progress="87">
+                                <svg width="200" height="200">
+                                    <circle cx="100" cy="100" r="80" fill="none" stroke="#E9ECEF" stroke-width="20"/>
+                                    <circle cx="100" cy="100" r="80" fill="none" stroke="#39A900" stroke-width="20"
+                                            stroke-dasharray="502.4" stroke-dashoffset="65.3" 
+                                            transform="rotate(-90 100 100)"/>
+                                    <text x="100" y="110" text-anchor="middle" font-size="36" font-weight="bold" fill="#39A900">87%</text>
+                                </svg>
+                            </div>
+                            <div class="metric-breakdown">
+                                <div class="breakdown-item">Backend (Java): 89%</div>
+                                <div class="breakdown-item">Frontend (Angular): 83%</div>
+                                <div class="breakdown-item">Meta establecida: ≥85%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card-large">
+                        <h3>Calidad del Código (SonarQube)</h3>
+                        <div class="sonar-metrics">
+                            <div class="sonar-rating">
+                                <div class="rating-badge grade-a">A</div>
+                                <div class="rating-label">Reliability</div>
+                            </div>
+                            <div class="sonar-rating">
+                                <div class="rating-badge grade-a">A</div>
+                                <div class="rating-label">Security</div>
+                            </div>
+                            <div class="sonar-rating">
+                                <div class="rating-badge grade-a">A</div>
+                                <div class="rating-label">Maintainability</div>
+                            </div>
+                        </div>
+                        <div class="sonar-details">
+                            <div class="detail-item">Bugs: 0</div>
+                            <div class="detail-item">Vulnerabilities: 0</div>
+                            <div class="detail-item">Code Smells: 12 (Menores)</div>
+                            <div class="detail-item">Duplicación: 2.3%</div>
+                            <div class="detail-item">Deuda Técnica: 4h 30m</div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card-large">
+                        <h3>Rendimiento</h3>
+                        <div class="performance-metrics">
+                            <div class="perf-stat">
+                                <div class="perf-value">38ms</div>
+                                <div class="perf-label">Tiempo Respuesta Promedio</div>
+                                <div class="perf-target">Meta: ≤100ms</div>
+                            </div>
+                            <div class="perf-stat">
+                                <div class="perf-value">245</div>
+                                <div class="perf-label">Transacciones/seg</div>
+                                <div class="perf-target">Meta: ≥100 TPS</div>
+                            </div>
+                            <div class="perf-stat">
+                                <div class="perf-value">500</div>
+                                <div class="perf-label">Usuarios Concurrentes</div>
+                                <div class="perf-target">Meta: ≥200</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card-large">
+                        <h3>Defectos</h3>
+                        <div class="defects-chart">
+                            <div class="defect-stat critical-stat">
+                                <div class="defect-number">0</div>
+                                <div class="defect-label">Críticos</div>
+                            </div>
+                            <div class="defect-stat high-stat">
+                                <div class="defect-number">0</div>
+                                <div class="defect-label">Altos</div>
+                            </div>
+                            <div class="defect-stat medium-stat">
+                                <div class="defect-number">1</div>
+                                <div class="defect-label">Medios</div>
+                            </div>
+                            <div class="defect-stat low-stat">
+                                <div class="defect-number">1</div>
+                                <div class="defect-label">Bajos</div>
+                            </div>
+                        </div>
+                        <div class="defects-density">
+                            Densidad de Defectos: <strong>0.85 defectos/KLOC</strong> (Excelente)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="additional-metrics content-card">
+                    <h3>Métricas Adicionales</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Valor</th>
+                                <th>Interpretación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Complejidad Ciclomática Promedio</td>
+                                <td>4.2</td>
+                                <td class="good-metric">Baja - Código simple y mantenible</td>
+                            </tr>
+                            <tr>
+                                <td>Profundidad de Herencia</td>
+                                <td>3.1</td>
+                                <td class="good-metric">Aceptable - Jerarquías no muy profundas</td>
+                            </tr>
+                            <tr>
+                                <td>Acoplamiento (CBO)</td>
+                                <td>8.5</td>
+                                <td class="good-metric">Bajo - Módulos bien desacoplados</td>
+                            </tr>
+                            <tr>
+                                <td>Cohesión (LCOM)</td>
+                                <td>0.15</td>
+                                <td class="good-metric">Alta - Clases cohesivas</td>
+                            </tr>
+                            <tr>
+                                <td>Líneas de Código</td>
+                                <td>21,340</td>
+                                <td class="neutral-metric">Tamaño moderado del proyecto</td>
+                            </tr>
+                            <tr>
+                                <td>Comentarios</td>
+                                <td>18%</td>
+                                <td class="good-metric">Adecuado - Bien documentado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones Section -->
+        <section id="conclusiones" class="section conclusiones-section">
+            <div class="container">
+                <h2 class="section-title">Conclusiones y Recomendaciones</h2>
+                
+                <div class="content-card">
+                    <h3>Conclusiones Generales</h3>
+                    <p>
+                        La evaluación exhaustiva del Sistema de Gestión de Inventario Multi-tienda durante 3 semanas 
+                        de pruebas intensivas ha generado las siguientes conclusiones:
+                    </p>
+
+                    <h4>1. Cumplimiento de Requisitos y Calidad General</h4>
+                    <p>
+                        El sistema cumple con el 100% de los requisitos funcionales especificados y el 95% de los 
+                        requisitos no funcionales. La única excepción es el soporte para navegadores legacy (IE11), 
+                        que fue posteriormente descartado del alcance por obsolescencia. La puntuación ponderada 
+                        final de 96.5/100 refleja un nivel de calidad excepcional que supera los estándares de la 
+                        industria para sistemas empresariales de complejidad similar.
+                    </p>
+
+                    <h4>2. Rendimiento y Escalabilidad</h4>
+                    <p>
+                        Los resultados de las pruebas de rendimiento son sobresalientes. El sistema mantiene tiempos 
+                        de respuesta promedio de 38ms con 200 usuarios concurrentes, muy por debajo del límite de 
+                        100ms establecido. La capacidad demostrada de soportar 500 usuarios concurrentes sin 
+                        degradación significativa (67ms de respuesta promedio) proporciona un margen de crecimiento 
+                        confortable. Las pruebas de resistencia de 4 horas no revelaron memory leaks ni degradación 
+                        progresiva, confirmando la estabilidad del sistema para operación continua.
+                    </p>
+
+                    <h4>3. Seguridad</h4>
+                    <p>
+                        El análisis de seguridad realizado con OWASP ZAP y pruebas manuales de penetración no identificó 
+                        vulnerabilidades críticas ni altas. Las 3 vulnerabilidades críticas detectadas inicialmente 
+                        (race condition, SQL injection, memory leak) fueron completamente resueltas. La única 
+                        recomendación de seguridad pendiente (encriptación de datos sensibles en base de datos) es de 
+                        severidad media y puede abordarse en iteraciones futuras sin comprometer la seguridad operacional 
+                        del sistema.
+                    </p>
+
+                    <h4>4. Experiencia de Usuario</h4>
+                    <p>
+                        Las pruebas de usabilidad con 12 usuarios representativos arrojaron un System Usability Scale 
+                        (SUS) de 88.5/100, calificación considerada "Excelente" según benchmarks de la industria. Los 
+                        usuarios completaron el 98% de las tareas asignadas exitosamente, con tiempos promedio que 
+                        cumplieron o superaron las expectativas. El feedback cualitativo destacó la navegación intuitiva 
+                        y el diseño limpio como fortalezas principales.
+                    </p>
+
+                    <h4>5. Cobertura de Pruebas</h4>
+                    <p>
+                        La cobertura de código del 87% (89% backend, 83% frontend) supera la meta establecida del 85% 
+                        y refleja una estrategia sólida de testing automatizado. Los 155 casos de prueba (112 unitarios, 
+                        28 integración, 15 E2E) proporcionan una red de seguridad robusta para futuras modificaciones. 
+                        La tasa de éxito del 98.7% en pruebas automatizadas demuestra la estabilidad del sistema.
+                    </p>
+
+                    <h4>6. Gestión de Defectos</h4>
+                    <p>
+                        De los 18 defectos identificados durante las pruebas, 16 fueron resueltos exitosamente (88.9%). 
+                        Todos los defectos críticos (3) y altos (5) fueron corregidos antes del cierre de pruebas. Los 
+                        2 defectos menores abiertos no representan impedimentos para el lanzamiento a producción y están 
+                        planificados para resolución en el primer sprint post-release. La densidad de defectos de 
+                        0.85/KLOC es significativamente inferior al promedio de la industria (2-5/KLOC).
+                    </p>
+
+                    <h3>Recomendaciones</h3>
+
+                    <h4>Recomendaciones Críticas (Pre-Lanzamiento)</h4>
+                    <p><strong>Ninguna.</strong> El sistema cumple todos los criterios críticos para lanzamiento.</p>
+
+                    <h4>Recomendaciones Importantes (Post-Lanzamiento Inmediato)</h4>
+                    <ul>
+                        <li>
+                            <strong>Resolver DEF-015:</strong> Corregir scroll horizontal en resolución 1024x600. 
+                            Aunque no bloquea el lanzamiento, afecta usuarios con netbooks antiguos.
+                        </li>
+                        <li>
+                            <strong>Agregar tooltips faltantes:</strong> Mejorar guías contextuales en campos menos 
+                            obvios para reducir curva de aprendizaje.
+                        </li>
+                        <li>
+                            <strong>Optimizar lazy loading:</strong> Implementar carga diferida de módulos Angular 
+                            para reducir tiempo de carga inicial de 2.8s a ~1.5s.
+                        </li>
+                    </ul>
+
+                    <h4>Recomendaciones de Mejora Continua</h4>
+                    <ul>
+                        <li>
+                            <strong>Monitoreo en producción:</strong> Implementar APM (Application Performance Monitoring) 
+                            con herramientas como New Relic o Datadog para detectar problemas en tiempo real.
+                        </li>
+                        <li>
+                            <strong>Logging estructurado:</strong> Migrar a logging estructurado (JSON) para facilitar 
+                            análisis con herramientas como ELK Stack.
+                        </li>
+                        <li>
+                            <strong>Pruebas de caos:</strong> Implementar Chaos Engineering para validar resiliencia 
+                            ante fallos de componentes.
+                        </li>
+                        <li>
+                            <strong>Incrementar cobertura E2E:</strong> Expandir suite de pruebas end-to-end de 15 a 
+                            30 escenarios para cubrir más flujos de usuario.
+                        </li>
+                        <li>
+                            <strong>Auditoría de accesibilidad:</strong> Realizar evaluación WCAG 2.1 Level AA para 
+                            mejorar accesibilidad a usuarios con discapacidades.
+                        </li>
+                        <li>
+                            <strong>Implementar feature flags:</strong> Adoptar sistema de feature toggles para 
+                            despliegues más seguros y rollbacks instantáneos.
+                        </li>
+                    </ul>
+
+                    <h3>Decisión Final</h3>
+                    <div class="final-decision approved">
+                        <div class="decision-icon">✓</div>
+                        <div class="decision-content">
+                            <h4>APROBADO PARA DESPLIEGUE EN PRODUCCIÓN</h4>
+                            <p>
+                                El Sistema de Gestión de Inventario Multi-tienda ha superado exitosamente todas las 
+                                fases de evaluación y cumple con los criterios de calidad establecidos. El equipo de 
+                                QA certifica que el sistema está listo para despliegue en ambiente de producción.
+                            </p>
+                            <p>
+                                <strong>Recomendación:</strong> Proceder con despliegue gradual (rollout progresivo) 
+                                comenzando con una tienda piloto, seguido de expansión a todas las sucursales en un 
+                                período de 2 semanas, permitiendo monitoreo cercano y ajustes si necesario.
+                            </p>
+                            <p class="approval-signatures">
+                                <strong>Aprobado por:</strong><br>
+                                Jose - QA Lead<br>
+                                Fecha: 22 de Noviembre, 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-quote content-card">
+                    <blockquote>
+                        "La calidad no es un acto, es un hábito. El éxito de este proyecto es testimonio del 
+                        compromiso constante del equipo con la excelencia."
+                        <footer>— Equipo de Calidad, SENA 2025</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SENA</h3>
+                    <p>Servicio Nacional de Aprendizaje</p>
+                    <p>Formación profesional para el desarrollo de Colombia</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Programa</h3>
+                    <p>Análisis y Desarrollo de Sistemas de Información</p>
+                    <p>Ficha: 2885494</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Evidencia</h3>
+                    <p>GA11-220501098-AA2-EV01</p>
+                    <p>Informe de Resultados del Comportamiento del Software</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SENA - Todos los derechos reservados | Elaborado por: Jose</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
